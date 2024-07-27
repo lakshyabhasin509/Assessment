@@ -12,6 +12,7 @@ exports.checkStatus = async (req, res) => {
     }
     
     return res.status(200).json({
+      
       status: product.status,
       outputImageUrls: product.outputImageUrls,
     });

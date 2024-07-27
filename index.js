@@ -13,7 +13,7 @@ const { swaggerJsDoc, swaggerUi, swaggerSpec } = require("./services/swagger");
 const port=process.env.PORT || 5000;
 
 const dbUrl = process.env.LOCAL_DB_CONNECT;
-const mongoOpts = { useNewUrlParser: true };
+const  mongoOpts = { useNewUrlParser: true };
 
 
 const publicImagesDir = 'public/output-images';
@@ -46,4 +46,4 @@ app.use('/images', express.static(publicImagesDir));
 app.get("/",(req,res)=>{
     res.send({stutus:"ok"})
 })
-app.listen(port, () => console.log("server is running on port 3000"));
+app.listen(port, () => console.log("server is running on port " + port));
