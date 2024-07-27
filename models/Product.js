@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const imageData  = new mongoose.Schema({
+const Product  = new mongoose.Schema({
 Data:{
   type:[
     {
@@ -31,4 +31,4 @@ Data:{
   }
 });
 
-module.exports = mongoose.model('Product', imageData);
+module.exports = mongoose.model('Product', Product);
