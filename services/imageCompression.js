@@ -3,6 +3,8 @@ const Product = require('../models/Product');
 const path = require('path')
 const ShortUniqueId=require('short-unique-id')
 
+
+
 const sharp = require('sharp');
 const fs=require('fs')
 const port=process.env.PORT;
@@ -26,7 +28,7 @@ exports.processImages = async (product) => {
       const outputPath=path.join(publicImagesDir , `${outputFile}.jpg`)
      const compressionSuccess= await compressAndSaveImage(imageUrl,outputPath);
      if(compressionSuccess)
-     processedImageUrls.push(`http://localhost:${port}/images/${outputFile}.jpg`);
+     processedImageUrls.push(`https://assessment-production.up.railway.app/images/${outputFile}.jpg`);
     }
    Skus.outputImageUrls = processedImageUrls;
   }
